@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="We are the custom paper packaging manufacturer with 5 years professional experience. We can customize gift cardboard box, card box, corrugated mailing box and paper bag and any kind of custom paper products. ">
+    <meta name="keywords" content="custom gift box, gift box,gift box with lid, gift boxes wholesale, large gift boxes with lids, cardboard box, corrugated boxes manufacturers, subscription boxes for men, beauty subscription boxes, cosmetic box, cosmetic paper box, paper bag printing, paper bags with handles, kraft paper bags, custom paper bags">
+    <link rel="shortcut icon" type="image/png" href="~/Content/Img/favicon.ico">
+    <title>Box-tailor About</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+</head>
+<body data-controller="page" data-action="about" class="page" id="about" data-csrf="MRQscGV/Ag9JDhtsUh1mMCs/XAADJgAAzvE635amzMl6atQUbQjrMQ==">
+    <!--------------------------nav---------------------------------->
+    <nav class="navbar navbar-default" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLinkWithImage(Url.Content("~/Content/Img/logo.png"), "Index", "Index")
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-mobile">
+
+                    <li>
+                        @Html.ActionLink("Home", "Index", "Index")
+                    </li>
+
+                    <li class="dropdown" id="solution-dropdown">
+                        <a href="javascript:;" class="dropdown-toggle dropdown-toggle-mobile" id="solution-dropdown-title" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product</a>
+
+                        <ul class="dropdown-menu solutions-menu">
+                            <li class="solution">
+                                <a href="/Product/Custom_cardboard_box">
+                                    <h4>Custom cardboard box</h4>
+                                    <!--<p class="hidden-xs">Professional custom gray box</p>-->
+                                </a>
+                            </li>
+                            <li class="solution">
+                                <a href="/Product/Custom_corrugated_mailers">
+                                    <h4>Custom corrugated mailers</h4>
+                                    <!--<p class="hidden-xs">Professional custom aircraft box</p>-->
+                                </a>
+                            </li>
+                            <li class="solution">
+                                <a href="/Product/Custom_card_box">
+                                    <h4>Custom card box</h4>
+                                    <!--<p class="hidden-xs">Professional custom card box</p>-->
+                                </a>
+                            </li>
+                            <li class="solution">
+                                <a href="/Product/Custom_paper_bags">
+                                    <h4>Custom paper bags</h4>
+                                    <!--<p class="hidden-xs">Professional custom paper bag</p>-->
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        @Html.ActionLink("FAQ", "Faq", "Faq")
+                    </li>
+
+                    <li>
+                        @Html.ActionLink("About", "About", "About")
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @RenderBody()
+    <footer class="footer">
+        <section class="footer__closing">
+            <div class="section-container section-container--tight u-mb-80 u-flex-wrap">
+                <div class="closing__col">
+                    <!--定制盒子-->
+                    <h2 class="u-mb-16">Product</h2>
+                    <a href="/Product/Custom_cardboard_box">Custom cardboard box</a>
+                    <a href="/Product/Custom_corrugated_mailers">Custom corrugated mailers</a>
+                    <a href="/Product/Custom_card_box">Custom card box</a>
+                    <a href="/Product/Custom_paper_bags">Custom paper bags</a>
+                </div>
+                <div class="closing__col">
+                    <h2 class="u-mb-16">About</h2>
+                    <a href="/Index/Index">Home</a>
+                    <!--<a href="Galleryjavascript:;">Case</a>-->
+                    <!--<a href="Blog.html">Blog</a>-->
+                    <a href="/About/About">About me</a>
+                </div>
+                <div class="closing__col">
+                    <h2 class="u-mb-16">Help</h2>
+                    <a href="/Faq/Faq">FAQ</a>
+                </div>
+            </div>
+
+            <div class="section-container u-flex-column">
+                <div class="footer__disclaimer">
+                    <img alt="Packlane" width="200" src="~/Content/Img/logo.png">
+                    <p>Copyright © 2019 boxtailor, Inc. All rights reserved.</p>
+                </div>
+                <span class="ssl_aq" id="siteseal">
+                    <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=mJXqaeAcR38cSEozKUSF5tIRYpM8cTdZaKevhlahR5Ix7KfWi347D2QS4wMc"></script>
+                </span>
+            </div>
+        </section>
+    </footer>
+    
+    @RenderSection("scripts", required: false)
+</body>
+</html>

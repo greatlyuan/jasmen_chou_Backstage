@@ -1,0 +1,114 @@
+﻿@{
+    @model jasmen_chou_Backstage.Models.UserInfo
+}
+<script src="~/Content/Js/About/about.js" type="text/javascript" charset="utf-8"></script>
+<main>
+    <section class="masthead">
+        <img width="1000" height="391" src="~/Content/Img/About/about_banner.png">
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="overview">
+                <h1>About Box-tailor</h1>
+                <p>
+                    Box-tailor believes that brilliant packaging empowers all business. In the past 5 years, we helped small business owners, entrepreneurs, subscription box startups to custom different kind of packaging that upgrade their business image. We are not only a box manufacturer, we are professional at designing packaging box according to your story. All our custom packaging can be finished in 10-30days after confirming artwork. Our commitment to having the best customer service in the business has set us apart and served us well over our 5-year history.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="overview">
+                <h1>Our Factory</h1>
+                <img class="our_facktory" src="~/Content/Img/About/about.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <section id="brilliant-boxes" class="brilliant-boxes">
+        <h2><span>Please contact us</span></h2>
+        <h5 id="Address">
+            <span class="left">
+                Address:
+            </span>
+            <span class="right">
+                43th Floor, ZhongYin Building, Panyu Square, 338 Qinghe East Road,Guangzhou, Guangdong, CN.
+            </span>
+        </h5>
+        <h5 id="Email">
+            <span class="left">
+                E—mail:
+            </span>
+            <span class="right">
+                jasmen.guan@gmail.com
+            </span>
+        </h5>
+        <h5 id="WhatsApp">
+            <span class="left">
+                WhatsAPP:
+            </span>
+            <span class="right">
+                +86 13580357596
+            </span>
+        </h5>
+
+        <button class="message_btn btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal">
+            Online message
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="exampleModalLabel">Contact us</h4>
+                    </div>
+
+                    <div class="modal-body">
+                       @using (Html.BeginForm("Submission", "About", FormMethod.Post))
+                        {
+                            @Html.ValidationSummary(true)
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">First Name:</label>
+                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FirstName, null, new { @class = "QianJingSe" })
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">Last Name:</label>
+                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LastName, null, new { @class = "QianJingSe" })
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">Phone Number:</label>
+                                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PhoneNumber, null, new { @class = "QianJingSe" })
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">E-mail:</label>
+                                @Html.EditorFor(model => model.Eamil, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Eamil, null, new { @class = "QianJingSe" })
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">Message:</label>
+                                @Html.EditorFor(model => model.Messages, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Messages, null, new { @class = "QianJingSe" })
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="sub_Message">Send message</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
